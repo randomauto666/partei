@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vision Deutschland — Vision für Morgen</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/vision.png') }}">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -16,23 +17,41 @@
   </div>
 </div>
 
-<!-- ─── KAPITEL PANEL (Slide-in Drawer) ─── -->
-<div id="kapitel-panel">
-  <div class="kapitel-backdrop"></div>
-  <div class="kapitel-drawer">
-    <div class="kapitel-header">
-      <div class="kapitel-header-left">
-        <span class="kapitel-header-eyebrow" id="kapitel-eyebrow">Kapitel 01</span>
-        <h2 class="kapitel-header-title" id="kapitel-title">Rente & Altersvorsorge</h2>
-      </div>
-      <button class="kapitel-close" onclick="closeKapitel()">✕</button>
+<!-- ─── KAPITEL SUBPAGE (Fullscreen) ─── -->
+<div id="kapitel-subpage">
+  <nav class="sub-nav">
+    <a href="#" class="nav-logo" id="sub-logo-link">
+      <img src="static/images/vision.png" alt="VD Logo">
+      <span class="nav-logo-text">Vision <span>Deutschland</span></span>
+    </a>
+    <button class="sub-back-btn" onclick="closeKapitel()">
+      <span>←</span> Zurück
+    </button>
+  </nav>
+
+  <div class="sub-hero">
+    <div class="sub-hero-lines"></div>
+    <div class="sub-hero-bar"></div>
+    <div class="sub-hero-content">
+      <p class="sub-eyebrow" id="kapitel-eyebrow">Kapitel 01</p>
+      <h1 class="sub-title" id="kapitel-title">Rente &amp; Altersvorsorge</h1>
+      <div class="sub-title-divider"></div>
     </div>
-    <div class="kapitel-body" id="kapitel-body"></div>
+    <div class="sub-hero-num" id="kapitel-hero-num">01</div>
+  </div>
+
+  <div class="sub-content">
+    <div class="sub-body" id="kapitel-body"></div>
+  </div>
+
+  <div class="sub-footer">
+    <button class="sub-footer-back" onclick="closeKapitel()">← Zurück zur Übersicht</button>
+    <span class="sub-footer-label">Vision Deutschland — Vision für Morgen</span>
   </div>
 </div>
 
-<!-- ─── NAV ─── -->
-<nav>
+<!-- ─── MAIN NAV ─── -->
+<nav id="main-nav">
   <a href="#" class="nav-logo">
     <img src="static/images/vision.png" alt="VD Logo">
     <span class="nav-logo-text">Vision <span>Deutschland</span></span>
@@ -43,9 +62,7 @@
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </button>
 </nav>
 
@@ -63,50 +80,30 @@
   <img src="static/images/vision.png" alt="" class="hero-logo-bg" aria-hidden="true">
   <div class="hero-content">
     <p class="hero-eyebrow">Bundestagswahl 2026</p>
-    <h1 class="hero-title">
-      Für ein<br>
-      <em>starkes</em><br>
-      Deutschland.
-    </h1>
+    <h1 class="hero-title">Für ein<br><em>starkes</em><br>Deutschland.</h1>
     <p class="hero-subtitle">
       Klare Antworten auf die großen Fragen unserer Zeit. Kein Wegsehen, kein Zögern — konkrete Lösungen für Rente, Sicherheit, Umwelt und Wirtschaft.
     </p>
     <div class="hero-ctas">
-      <a href="#themen" class="hero-cta">
-        <span>Wahlprogramm</span>
-        <span class="hero-arrow">→</span>
-      </a>
+      <a href="#themen" class="hero-cta"><span>Wahlprogramm</span><span class="hero-arrow">→</span></a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- ─── MARQUEE STRIP ─── -->
+<!-- ─── MARQUEE ─── -->
 <div id="manifesto">
   <div class="marquee-track">
-    <span class="marquee-item accent">Rente absichern</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item">Klima schützen</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item accent">Fachkräfte gewinnen</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item">Sicherheit stärken</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item accent">Vision für Morgen</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item">Rente absichern</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item accent">Klima schützen</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item">Fachkräfte gewinnen</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item accent">Sicherheit stärken</span>
-    <span class="marquee-item">•</span>
-    <span class="marquee-item">Vision für Morgen</span>
-    <span class="marquee-item">•</span>
+    <span class="marquee-item accent">Rente absichern</span><span class="marquee-item">•</span>
+    <span class="marquee-item">Klima schützen</span><span class="marquee-item">•</span>
+    <span class="marquee-item accent">Fachkräfte gewinnen</span><span class="marquee-item">•</span>
+    <span class="marquee-item">Sicherheit stärken</span><span class="marquee-item">•</span>
+    <span class="marquee-item accent">Vision für Morgen</span><span class="marquee-item">•</span>
+    <span class="marquee-item">Rente absichern</span><span class="marquee-item">•</span>
+    <span class="marquee-item accent">Klima schützen</span><span class="marquee-item">•</span>
+    <span class="marquee-item">Fachkräfte gewinnen</span><span class="marquee-item">•</span>
+    <span class="marquee-item accent">Sicherheit stärken</span><span class="marquee-item">•</span>
+    <span class="marquee-item">Vision für Morgen</span><span class="marquee-item">•</span>
   </div>
 </div>
 
@@ -119,28 +116,16 @@
       <p class="section-intro">
         Wir stehen für eine Politik der Verantwortung. Nicht für kurzfristige Schlagzeilen — sondern für langfristige Lösungen, die das Leben der Menschen in Deutschland wirklich verbessern.
       </p>
-      <p style="font-size:0.9rem; line-height:1.9; color:var(--text-muted); max-width:460px;">
+      <p style="font-size:0.9rem;line-height:1.9;color:var(--text-muted);max-width:460px;">
         Unsere vier Kernthemen sind keine Wahlversprechen — sie sind konkrete Programme, ausgearbeitet von Experten, prüfbar in jedem Detail. Deutschland braucht keine leeren Worte. Es braucht eine Vision.
       </p>
     </div>
     <div class="fade-up">
       <div class="about-stats">
-        <div class="stat-item">
-          <div class="stat-num">4<span>×</span></div>
-          <div class="stat-label">Kernthemen im Programm</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">18<span>+</span></div>
-          <div class="stat-label">Länder als Vorbild analysiert</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">320<span>k</span></div>
-          <div class="stat-label">Mitglieder bundesweit</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">5<span>.</span>2</div>
-          <div class="stat-label">Mio. Wähler bei letzter Wahl</div>
-        </div>
+        <div class="stat-item"><div class="stat-num">4<span>×</span></div><div class="stat-label">Kernthemen im Programm</div></div>
+        <div class="stat-item"><div class="stat-num">18<span>+</span></div><div class="stat-label">Länder als Vorbild analysiert</div></div>
+        <div class="stat-item"><div class="stat-num">320<span>k</span></div><div class="stat-label">Mitglieder bundesweit</div></div>
+        <div class="stat-item"><div class="stat-num">5<span>.</span>2</div><div class="stat-label">Mio. Wähler bei letzter Wahl</div></div>
       </div>
     </div>
   </div>
@@ -153,73 +138,47 @@
       <p class="section-label">Wahlprogramm</p>
       <h2 class="section-title">Die vier Kapitel.</h2>
     </div>
-    <p style="font-size:0.85rem; color:var(--text-muted); max-width:260px; text-align:right; line-height:1.7;">
+    <p style="font-size:0.85rem;color:var(--text-muted);max-width:260px;text-align:right;line-height:1.7;">
       Klicken Sie auf ein Thema, um das vollständige Kapitel zu öffnen.
     </p>
   </div>
-
   <div class="themen-grid fade-up">
-
-    <!-- Rente -->
     <div class="thema-card" onclick="openKapitel('rente')">
       <div class="thema-number">01</div>
       <div>
-        <div class="thema-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
+        <div class="thema-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <h3 class="thema-title">Rente &<br>Altersvorsorge</h3>
-        <p class="thema-desc">
-          Sichere Renten für alle Generationen. Wir reformieren das Rentensystem nachhaltig — ohne Beitragserhöhungen, ohne Leistungskürzungen.
-        </p>
+        <p class="thema-desc">Sichere Renten für alle Generationen. Wir reformieren das Rentensystem nachhaltig — ohne Beitragserhöhungen, ohne Leistungskürzungen.</p>
       </div>
       <span class="thema-cta">Kapitel lesen</span>
     </div>
-
-    <!-- Umweltschutz -->
     <div class="thema-card" onclick="openKapitel('umwelt')">
       <div class="thema-number">02</div>
       <div>
-        <div class="thema-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
+        <div class="thema-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3 class="thema-title">Umweltschutz &<br>Klimapolitik</h3>
-        <p class="thema-desc">
-          Klimaziele konsequent erreichen — ohne den Wirtschaftsstandort zu gefährden. Grüner Wandel als Chance, nicht als Bürde.
-        </p>
+        <p class="thema-desc">Klimaziele konsequent erreichen — ohne den Wirtschaftsstandort zu gefährden. Grüner Wandel als Chance, nicht als Bürde.</p>
       </div>
       <span class="thema-cta">Kapitel lesen</span>
     </div>
-
-    <!-- Fachkraftmangel -->
     <div class="thema-card" onclick="openKapitel('fachkraefte')">
       <div class="thema-number">03</div>
       <div>
-        <div class="thema-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3 class="thema-title">Fachkräftemangel<br>& Bildung</h3>
-        <p class="thema-desc">
-          Deutschland braucht Köpfe. Wir investieren in Ausbildung, schaffen gezielte Zuwanderungsanreize und stärken die duale Bildung.
-        </p>
+        <div class="thema-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 class="thema-title">Fachkräftemangel<br>&amp; Bildung</h3>
+        <p class="thema-desc">Deutschland braucht Köpfe. Wir investieren in Ausbildung, schaffen gezielte Zuwanderungsanreize und stärken die duale Bildung.</p>
       </div>
       <span class="thema-cta">Kapitel lesen</span>
     </div>
-
-    <!-- Sicherheit -->
     <div class="thema-card" onclick="openKapitel('sicherheit')">
       <div class="thema-number">04</div>
       <div>
-        <div class="thema-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
+        <div class="thema-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <h3 class="thema-title">Sicherheit &<br>Verteidigung</h3>
-        <p class="thema-desc">
-          Ein sicheres Land ist kein Luxus — es ist Grundlage für alles andere. Mehr Personal, bessere Ausrüstung, klare Strategie.
-        </p>
+        <p class="thema-desc">Ein sicheres Land ist kein Luxus — es ist Grundlage für alles andere. Mehr Personal, bessere Ausrüstung, klare Strategie.</p>
       </div>
       <span class="thema-cta">Kapitel lesen</span>
     </div>
-
   </div>
 </section>
 
@@ -229,42 +188,19 @@
     <div class="fade-up">
       <p class="section-label">Kontakt</p>
       <h2 class="section-title">Sprechen Sie<br>mit uns.</h2>
-      <p class="section-intro">
-        Fragen zum Programm, Mitgliedschaft oder Veranstaltungen? Wir sind für Sie da.
-      </p>
+      <p class="section-intro">Fragen zum Programm, Mitgliedschaft oder Veranstaltungen? Wir sind für Sie da.</p>
       <div class="kontakt-info">
-        <div class="info-item">
-          <span class="info-label">Adresse</span>
-          <span class="info-value">Parteizentrale<br>Wilhelmstraße 14<br>10963 Berlin</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Telefon</span>
-          <span class="info-value">+49 30 / 820 000-0</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">E-Mail</span>
-          <span class="info-value">info@visiondeutschland.de</span>
-        </div>
+        <div class="info-item"><span class="info-label">Adresse</span><span class="info-value">Parteizentrale<br>Wilhelmstraße 14<br>10963 Berlin</span></div>
+        <div class="info-item"><span class="info-label">Telefon</span><span class="info-value">+49 30 / 820 000-0</span></div>
+        <div class="info-item"><span class="info-label">E-Mail</span><span class="info-value">info@visiondeutschland.de</span></div>
       </div>
     </div>
     <div class="fade-up">
       <div class="kontakt-form">
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Ihr vollständiger Name">
-        </div>
-        <div class="form-group">
-          <label>E-Mail</label>
-          <input type="email" placeholder="ihre@email.de">
-        </div>
-        <div class="form-group">
-          <label>Betreff</label>
-          <input type="text" placeholder="Worum geht es?">
-        </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea rows="5" placeholder="Ihre Nachricht…"></textarea>
-        </div>
+        <div class="form-group"><label>Name</label><input type="text" placeholder="Ihr vollständiger Name"></div>
+        <div class="form-group"><label>E-Mail</label><input type="email" placeholder="ihre@email.de"></div>
+        <div class="form-group"><label>Betreff</label><input type="text" placeholder="Worum geht es?"></div>
+        <div class="form-group"><label>Nachricht</label><textarea rows="5" placeholder="Ihre Nachricht…"></textarea></div>
         <button class="form-submit">Absenden →</button>
       </div>
     </div>
