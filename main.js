@@ -355,6 +355,36 @@ const kapitelData = {
         `
       },
       {
+        label: 'Datenanalyse',
+        heading: 'Die Lage in Zahlen',
+        content: `
+          <p class="kap-text">Die folgenden Grafiken zeigen das Ausmaß des Fachkräftemangels in Deutschland und Europa — und warum sofortiges Handeln notwendig ist.</p>
+
+          <div class="kap-infographic">
+            <div class="kap-infographic-label">Fehlende Fachkräfte nach Berufsfeld bis 2028</div>
+            <img src="static/images/fachkraefte_berufe.png" alt="In welchen Berufen 2028 die meisten Fachkräfte fehlen werden" class="kap-infographic-img">
+          </div>
+
+          <div class="kap-infographic">
+            <div class="kap-infographic-label">Rückgang der Erwerbsbevölkerung in der EU (2012–2050)</div>
+            <img src="static/images/fachkraefte_eu.png" alt="Rückgang der Erwerbsbevölkerung in der EU" class="kap-infographic-img">
+          </div>
+
+          <div class="kap-infographic-row">
+            <div class="kap-infographic kap-infographic-half">
+              <div class="kap-infographic-label">Bedarf an Pflegekräften in Deutschland</div>
+              <img src="static/images/fachkraefte_pflege.png" alt="Bedarf an Pflegekräften in Deutschland" class="kap-infographic-img">
+            </div>
+            <div class="kap-infographic kap-infographic-half">
+              <div class="kap-infographic-label">Pflegebedürftige & fehlende Pflegekräfte</div>
+              <img src="static/images/fachkraefte_pflegebed.png" alt="Pflegebedürftige und fehlende Pflegekräfte" class="kap-infographic-img">
+            </div>
+          </div>
+
+          <div class="kap-highlight">Die EU verliert bis 2050 rund <strong>40 Millionen Erwerbstätige</strong>. Deutschland ist besonders betroffen — im Pflegebereich fehlen bis 2030 voraussichtlich <strong>500.000 Kräfte</strong>.</div>
+        `
+      },
+      {
         label: 'Unsere Position',
         heading: 'Deutschland braucht Köpfe — und faire Bedingungen',
         content: `
