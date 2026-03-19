@@ -437,8 +437,8 @@ nav#main-nav {
   position: absolute; right: 4rem; top: 50%;
   transform: translateY(-50%);
   width: clamp(280px, 38vw, 520px);
-  opacity: 0.42; pointer-events: none; user-select: none;
-  filter: drop-shadow(0 0 40px rgba(29,110,122,0.2));
+  opacity: 1; pointer-events: none; user-select: none;
+  filter: brightness(2.2) contrast(0.8) saturate(1.2);
 }
 .hero-content {
   position: relative; z-index: 2;
