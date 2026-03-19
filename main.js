@@ -264,14 +264,109 @@ const kapitelData = {
     title: 'Fachkräftemangel & Bildung',
     sections: [
       {
-        label: 'Status',
-        heading: 'Dieses Kapitel wird überarbeitet',
+        label: 'Probleme',
+        heading: 'Zwei zentrale Herausforderungen',
         content: `
-          <div class="kap-highlight" style="border-color: var(--copper);">
-            Das vollständige Kapitel zu <strong>Fachkräftemangel & Bildung</strong> befindet sich noch in Ausarbeitung und wird in Kürze veröffentlicht.
+          <div class="kap-loesung">
+            <div class="kap-loesung-header">
+              <span class="kap-loesung-num">Problem 01</span>
+              <span class="kap-loesung-title">Fehlende Versorgung für die Gesellschaft</span>
+            </div>
+            <div class="kap-loesung-body">
+              <ul class="kap-list">
+                <li>Längere Wartezeiten auf Termine und Dienstleistungen in vielen Branchen</li>
+                <li>Keine ausreichende Terminvergabe — besonders im Gesundheits- und Pflegebereich spürbar</li>
+              </ul>
+              <div class="kap-zukunft"><strong>Folge:</strong> Die Bevölkerung leidet direkt unter dem Fachkräftemangel — nicht nur wirtschaftlich, sondern im Alltag.</div>
+            </div>
           </div>
-          <p class="kap-text">Wir arbeiten an konkreten Konzepten für eine zukunftsfähige Bildungspolitik — von der dualen Ausbildung über Fachkräftezuwanderung bis zur digitalen Bildungsinfrastruktur.</p>
-          <div class="kap-zukunft"><strong>Bald hier:</strong> Detaillierte Analysen, Daten und umsetzbare Lösungsansätze für Deutschlands Fachkräfteproblem.</div>
+          <div class="kap-loesung">
+            <div class="kap-loesung-header">
+              <span class="kap-loesung-num">Problem 02</span>
+              <span class="kap-loesung-title">Erhöhter Arbeitsdruck für Fachkräfte</span>
+            </div>
+            <div class="kap-loesung-body">
+              <ul class="kap-list">
+                <li>Verbleibende Fachkräfte müssen Aufgaben ausgeschiedener Kollegen auffangen</li>
+                <li>Steigender Druck führt zu Burnout, Krankheitsausfällen und weiteren Kündigungen</li>
+                <li>Ein Teufelskreis: weniger Personal → mehr Druck → noch weniger Personal</li>
+              </ul>
+              <div class="kap-zukunft"><strong>Folge:</strong> Ohne Gegenmaßnahmen verschärft sich die Situation selbstverstärkend — jeder Ausfall erhöht den Druck auf die verbleibenden Kräfte.</div>
+            </div>
+          </div>
+        `
+      },
+      {
+        label: 'Ursachenanalyse',
+        heading: 'Warum fehlen uns die Fachkräfte?',
+        content: `
+          <div class="kap-loesung">
+            <div class="kap-loesung-header">
+              <span class="kap-loesung-num">Ursachen → Problem 01</span>
+              <span class="kap-loesung-title">Fehlende Versorgung</span>
+            </div>
+            <div class="kap-loesung-body">
+              <div class="kap-highlight"><strong>Demografischer Wandel</strong></div>
+              <ul class="kap-list">
+                <li>Weniger junge Nachwuchskräfte treten ins Berufsleben ein</li>
+                <li>Gleichzeitig gehen immer mehr erfahrene Fachkräfte in Rente</li>
+                <li>Das Verhältnis von Ausscheidenden zu Neueinsteigenden kippt</li>
+              </ul>
+              <div class="kap-highlight" style="margin-top:1rem;"><strong>Fehlende Digitalisierung</strong></div>
+              <ul class="kap-list">
+                <li>Keine ausreichende Anzahl an Fachkräften für das digitale Fortschreiten</li>
+                <li>Deutschland hinkt bei der Digitalisierung öffentlicher und privater Strukturen hinterher</li>
+                <li>Bestehende Prozesse könnten durch Digitalisierung effizienter gestaltet werden — doch das Wissen fehlt</li>
+              </ul>
+              <div class="kap-highlight" style="margin-top:1rem;"><strong>Akademisierung</strong></div>
+              <ul class="kap-list">
+                <li>Immer weniger Jugendliche entscheiden sich für eine Ausbildung</li>
+                <li>Ein Studium wird gesellschaftlich höher bewertet — Ausbildungsberufe leiden darunter</li>
+                <li>Handwerk, Pflege und technische Berufe bleiben chronisch unterbesetzt</li>
+              </ul>
+            </div>
+          </div>
+          <div class="kap-loesung">
+            <div class="kap-loesung-header">
+              <span class="kap-loesung-num">Ursachen → Problem 02</span>
+              <span class="kap-loesung-title">Erhöhter Arbeitsdruck</span>
+            </div>
+            <div class="kap-loesung-body">
+              <div class="kap-highlight"><strong>Hohe Prozesskomplexität & Tempo</strong></div>
+              <ul class="kap-list">
+                <li>Steigende Anforderungen in nahezu allen Berufsfeldern</li>
+                <li>Multitasking und häufige Unterbrechungen erhöhen den mentalen Druck erheblich</li>
+                <li>Beschleunigung der Arbeitsprozesse ohne entsprechende Personalaufstockung</li>
+              </ul>
+              <div class="kap-highlight" style="margin-top:1rem;"><strong>Organisatorische Faktoren</strong></div>
+              <ul class="kap-list">
+                <li>Unklare Zuständigkeiten und mangelnde Abstimmung zwischen Abteilungen</li>
+                <li>Kostensenkungen bei ohnehin dünner Personaldecke</li>
+                <li>Strukturelle Ineffizienzen, die den Einzelnen überlasten</li>
+              </ul>
+              <div class="kap-highlight" style="margin-top:1rem;"><strong>Psychische Belastungen</strong></div>
+              <ul class="kap-list">
+                <li>Laufende Anpassung an neue Technologien erzeugt berufliche Unsicherheit</li>
+                <li>Angst vor Bedeutungsverlust oder Jobverlust durch Automatisierung</li>
+                <li>Fehlende Unterstützung bei Weiterbildung und Umstrukturierung</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        label: 'Unsere Position',
+        heading: 'Deutschland braucht Köpfe — und faire Bedingungen',
+        content: `
+          <p class="kap-text">Wir investieren in Ausbildung, schaffen gezielte Zuwanderungsanreize und stärken die duale Bildung. Gleichzeitig schützen wir die, die schon da sind — vor Überlastung und struktureller Ungerechtigkeit.</p>
+          <ul class="kap-list">
+            <li>Ausbildungsberufe gesellschaftlich aufwerten — finanziell und in der Wahrnehmung</li>
+            <li>Gezielte Zuwanderung von Fachkräften mit klaren Integrationsprogrammen</li>
+            <li>Digitalisierung als Entlastung, nicht als Bedrohung — mit begleitenden Schulungsangeboten</li>
+            <li>Verbindliche Personalmindeststandards in systemrelevanten Berufen</li>
+            <li>Psychische Gesundheit am Arbeitsplatz als gesetzlich verankertes Thema</li>
+          </ul>
+          <div class="kap-zukunft"><strong>Vision:</strong> Ein Arbeitsmarkt, der Fachkräfte anzieht, hält und wertschätzt — damit Gesellschaft und Wirtschaft funktionieren.</div>
         `
       }
     ]
