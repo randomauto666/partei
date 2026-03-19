@@ -437,7 +437,8 @@ nav#main-nav {
   position: absolute; right: 4rem; top: 50%;
   transform: translateY(-50%);
   width: clamp(280px, 38vw, 520px);
-  opacity: 0.06; pointer-events: none; user-select: none;
+  opacity: 0.18; pointer-events: none; user-select: none;
+  filter: drop-shadow(0 0 40px rgba(29,110,122,0.2));
 }
 .hero-content {
   position: relative; z-index: 2;
@@ -671,4 +672,40 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
   .stat-item:nth-child(3) { border-bottom: 1px solid var(--border); }
   .kap-data-grid { grid-template-columns: 1fr; }
   .sub-title { font-size: 2rem; }
+}
+
+/* ─── INFOGRAPHIC IMAGES ─── */
+.kap-infographic {
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.kap-infographic-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal);
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.kap-infographic-img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+.kap-infographic-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.kap-infographic-half {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .kap-infographic-row {
+    grid-template-columns: 1fr;
+  }
 }
