@@ -473,18 +473,20 @@ const kapitelData = {
   }
 };
 
-// ─── KAPITEL PANEL ───
-const panel = document.getElementById('kapitel-panel');
-const panelTitle = document.getElementById('kapitel-title');
-const panelEyebrow = document.getElementById('kapitel-eyebrow');
-const panelBody = document.getElementById('kapitel-body');
+// ─── KAPITEL SUBPAGE ───
+const subpage = document.getElementById('kapitel-subpage');
+const subTitle = document.getElementById('kapitel-title');
+const subEyebrow = document.getElementById('kapitel-eyebrow');
+const subBody = document.getElementById('kapitel-body');
+const subHeroNum = document.getElementById('kapitel-hero-num');
 
 function openKapitel(key) {
   const data = kapitelData[key];
   if (!data) return;
 
-  panelEyebrow.textContent = `Kapitel ${data.number}`;
-  panelTitle.textContent = data.title;
+  subEyebrow.textContent = `Kapitel ${data.number}`;
+  subTitle.textContent = data.title;
+  if (subHeroNum) subHeroNum.textContent = data.number;
 
   let html = '';
   data.sections.forEach(sec => {
@@ -496,20 +498,19 @@ function openKapitel(key) {
       </div>
     `;
   });
-  panelBody.innerHTML = html;
-  panelBody.scrollTop = 0;
+  subBody.innerHTML = html;
 
-  panel.classList.add('visible');
+  // Scroll subpage to top
+  subpage.scrollTop = 0;
+
+  subpage.classList.add('visible');
   document.body.style.overflow = 'hidden';
 }
 
 function closeKapitel() {
-  panel.classList.remove('visible');
+  subpage.classList.remove('visible');
   document.body.style.overflow = '';
 }
-
-// Close on backdrop click
-document.querySelector('.kapitel-backdrop').addEventListener('click', closeKapitel);
 
 // Close on ESC
 document.addEventListener('keydown', e => {
