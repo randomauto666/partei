@@ -437,7 +437,7 @@ nav#main-nav {
   position: absolute; right: 4rem; top: 50%;
   transform: translateY(-50%);
   width: clamp(280px, 38vw, 520px);
-  opacity: 0.18; pointer-events: none; user-select: none;
+  opacity: 0.42; pointer-events: none; user-select: none;
   filter: drop-shadow(0 0 40px rgba(29,110,122,0.2));
 }
 .hero-content {
